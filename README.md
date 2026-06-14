@@ -80,7 +80,6 @@ The application implements single-database logical multi-tenancy. Every transact
                  └──► [ OrderItems Table ]
 
 📝 Roadmap & Phase Deliverables
-
 [x] Phase 1: Core Infrastructure, Multi-Tenant Database Wiring & API Shell.
 [x] Phase 2: Premium Mobile-First PWA Design System & UI Components.
 [ ] Phase 3: Integration of Gemini LLM Engine for Live Instagram Chat Parsing.
