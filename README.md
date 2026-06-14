@@ -60,3 +60,23 @@ uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 
 Verify API Health: Open http://127.0.0.1:8000/api/v1/health
 Interactive API Docs: Open http://127.0.0.1:8000/docs
+
+2. Launching the Frontend (Next.js)
+cd frontend
+npm install
+npm run dev -- -p 4000
+
+Access App Shell: Open http://localhost:4000 (Use Mobile Viewport in DevTools for the optimized PWA experience).
+
+📈 Database Schema & Multi-Tenancy Architecture
+The application implements single-database logical multi-tenancy. Every transaction, product row, and order lifecycle is securely scoped under unique tenant boundaries via indexed shop_id references:
+
+[ Shop Table (Tenants) ]
+       │
+       ├──► [ Products Table ] ──► (Trackable SKU, Central Physical Stock)
+       │
+       └──► [ Orders Table ] ◄─── (Populated via Gemini AI Chat Extractor)
+                 │
+                 └──► [ OrderItems Table ]
+
+📝 Roadmap & Phase Deliverables
