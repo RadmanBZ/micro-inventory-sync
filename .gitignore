@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Next.js / frontend build output
+.next/
+out/
+build/
+dist/
+
+# Python
+backend/venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+
+# Local databases
+backend/inventory.db
+*.db
+*.sqlite3
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Logs & runtime
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Vercel / coverage
+.vercel/
+coverage/
