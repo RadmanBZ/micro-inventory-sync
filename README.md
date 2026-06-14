@@ -49,3 +49,14 @@ micro-inventory-sync/
     │   ├── app/        # Orders Hub, Inventory Grid, and Settings Routes
     │   ├── components/ # Premium UI Component Library
     │   └── lib/        # Dynamic Demo Mock Engines & Formatters
+
+⚡ Quick Start & Local Execution
+1. Launching the Backend (FastAPI)
+cd backend
+python3 -m venv venv
+source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+Verify API Health: Open http://127.0.0.1:8000/api/v1/health
+Interactive API Docs: Open http://127.0.0.1:8000/docs
