@@ -28,6 +28,12 @@ class Order(SQLModel, table=True):
             index=True,
         ),
     )
+    instagram_sender_id: str | None = Field(
+        default=None,
+        max_length=255,
+        index=True,
+        nullable=True,
+    )
     customer_name: str = Field(max_length=255, nullable=False)
     shipping_address: str = Field(max_length=1000, nullable=False)
     status: OrderStatus = Field(
